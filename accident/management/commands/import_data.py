@@ -11,7 +11,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         count = 0
         start_time = datetime.now()
-        Call.objects.all().delete()
+        # Call.objects.all().delete()
         self.stdout.write(self.style.SUCCESS('Opening file….'))
         with open('police-department-calls-for-service.csv', newline='') as csvfile:
             reader = list(csv.DictReader(csvfile))
@@ -37,8 +37,8 @@ class Command(BaseCommand):
                 if created:
                     count += 1
                 pbar.update(1)
-                if count == 100:
-                    break
+                # if count == 100:
+                #     break
         end_time = datetime.now() - start_time
         total_count = Call.objects.count()
         self.stdout.write(self.style.SUCCESS('Finish'))

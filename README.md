@@ -23,7 +23,7 @@
     ```
 * запуск Django
     ```bash
-    python mange.py runserver
+    python manage.py runserver
     ```
 
 ## Для сохранения данных из cvs файла в бд:
@@ -42,14 +42,14 @@ python -W ignore manage.py import_data | tee result.log
 
 ### Пример запроса без фильтрации
 
-```bash
+```
 http://127.0.0.1:8000/accidents/
 ```
 ![img_2.png](img_2.png)
 
 ### Пример запроса с фильтрацией
 
-```bash
+```
 http://127.0.0.1:8000/accidents/?report_date_after=2014-01-01&report_date_before=2019-01-01
 ```
 ![img_1.png](img_1.png)
