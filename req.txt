@@ -1,4 +1,4 @@
 django==4.1
-tqdm==4.64.1
+tqdm==4.64.0
 djangorestframework==3.13.1
 django-filter==22.1
